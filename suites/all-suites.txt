@@ -1,0 +1,9 @@
+export ECO_TEST_FEATURES=cni
+export ECO_TEST_FEATURES=dpdk
+export ECO_TEST_FEATURES=day1day2
+export ECO_TEST_FEATURES=policy
+export ECO_TEST_FEATURES=bfd
+export ECO_TEST_FEATURES=metallb
+export ECO_TEST_FEATURES=sriov
+export ECO_TEST_FEATURES=security
+
