@@ -1,0 +1,37 @@
+# Cluster Configuration
+export KUBECONFIG=/tmp/kubeconfig-3
+export ECO_TEST_VERBOSE='true'
+export ECO_VERBOSE_LEVEL=100
+export ECO_CNF_CORE_NET_CNF_MCP_LABEL=workercnf
+export ECO_WORKER_LABEL=workercnf
+export ECO_CNF_CORE_NET_VLAN=159
+export ECO_CNF_CORE_NET_SWITCH_LAGS=ae40,ae50
+export ECO_CNF_CORE_NET_MLB_ADDR_LIST=10.46.186.89,10.46.186.90,10.46.186.91,2620:52:0:2e51::89,2620:52:0:2e51::90,2620:52:0:2e51::91
+
+
+# Switch VLANs 159 175 176
+export ECO_CNF_CORE_NET_SWITCH_USER="root"
+export ECO_CNF_CORE_NET_SWITCH_PASS='Qum!8netd'
+export ECO_CNF_CORE_NET_SWITCH_IP="10.46.61.153"
+
+# Interface X710
+export ECO_CNF_CORE_NET_SRIOV_INTERFACE_LIST=ens1f0,ens1f1
+export ECO_CNF_CORE_NET_SWITCH_INTERFACES=et-1/0/7,et-1/0/6,et-1/0/12,et-1/0/13
+
+# Interface E810
+export ECO_CNF_CORE_NET_SRIOV_INTERFACE_LIST=ens5f0,ens5f1
+export ECO_CNF_CORE_NET_SWITCH_INTERFACES=et-1/0/8,et-1/0/9,et-1/0/14,et-1/0/15
+
+# Interface MLX
+export ECO_CNF_CORE_NET_SRIOV_INTERFACE_LIST=ens8f0np0,ens8f1np1
+export ECO_CNF_CORE_NET_SWITCH_INTERFACES=et-1/0/10,et-1/0/11,et-1/0/16,et-1/0/17
+
+# Images
+export ECO_CNF_CORE_NET_DPDK_TEST_CONTAINER=quay.io/ocp-edge-qe/eco-gotests-rootless-dpdk:v4.16.0
+export ECO_CNF_CORE_NET_TEST_CONTAINER=quay.io/ocp-edge-qe/eco-gotests-network-client:v4.19
+export ECO_CNF_CORE_NET_FRR_IMAGE=quay.io/ocp-edge-qe/frr:8.5.3
+
+borsalino
+
+
+

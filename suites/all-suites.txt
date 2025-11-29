@@ -1,0 +1,29 @@
+export ECO_TEST_FEATURES=cni
+export ECO_TEST_FEATURES=dpdk
+export ECO_TEST_FEATURES=day1day2
+export ECO_TEST_FEATURES=policy
+export ECO_TEST_FEATURES=bfd
+export ECO_TEST_FEATURES=metallb
+export ECO_TEST_FEATURES=sriov
+export ECO_TEST_FEATURES=security
+
+export ECO_TEST_LABELS="sriov"
+unset ECO_TEST_LABELS
+
+borsalino
+
+
+### CNF Gotests
+
+export FEATURES="cni"
+export FEATURES="vrf"
+export FEATURES="acc100"
+export FEATURES="metallb"
+export FEATURES="sriov"
+export FEATURES="accelerator"
+export FEATURES="gatekeeper"
+export FEATURES="ran"
+export FEATURES="ptp"
+export FEATURES="bfd"
+export FEATURES="policy"
+

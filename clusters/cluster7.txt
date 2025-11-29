@@ -1,0 +1,40 @@
+# Cluster Configuration
+export KUBECONFIG=/tmp/kubeconfig-7
+export ECO_TEST_VERBOSE='true'
+export ECO_VERBOSE_LEVEL=100
+export ECO_CNF_CORE_NET_CNF_MCP_LABEL=workercnf
+export ECO_WORKER_LABEL=workercnf
+export ECO_CNF_CORE_NET_VLAN=101
+export ECO_CNF_CORE_NET_SWITCH_LAGS=ae10,ae20
+export ECO_CNF_CORE_NET_MLB_ADDR_LIST="10.46.81.131,10.46.81.132,10.46.81.133,2620:52:0:2e51::131,2620:52:0:2e51::132,2620:52:0:2e51::133"
+
+# Switch VLANs 101 177 178
+export ECO_CNF_CORE_NET_SWITCH_USER="root"
+export ECO_CNF_CORE_NET_SWITCH_PASS='Qum!8netd'
+export ECO_CNF_CORE_NET_SWITCH_IP="10.46.61.153"
+
+# Interface X710
+export ECO_CNF_CORE_NET_SRIOV_INTERFACE_LIST=ens1f0,ens1f1
+export ECO_CNF_CORE_NET_SWITCH_INTERFACES=et-1/0/18,et-1/0/19,et-1/0/24,et-1/0/25
+
+# Interface E810
+export ECO_CNF_CORE_NET_SRIOV_INTERFACE_LIST=ens5f0,ens5f1
+export ECO_CNF_CORE_NET_SWITCH_INTERFACES=et-1/0/22,et-1/0/23,et-1/0/22,et-1/0/23
+
+# Interface MLX
+export ECO_CNF_CORE_NET_SRIOV_INTERFACE_LIST=ens8f0np0,ens8f1np1
+export ECO_CNF_CORE_NET_SWITCH_INTERFACES=et-0/0/44,et-0/0/45,et-0/0/28,et-0/0/29
+# Images
+export ECO_CNF_CORE_NET_DPDK_TEST_CONTAINER=quay.io/ocp-edge-qe/eco-gotests-rootless-dpdk:v4.16.0
+export ECO_CNF_CORE_NET_TEST_CONTAINER=quay.io/ocp-edge-qe/eco-gotests-network-client:v4.20
+export ECO_CNF_CORE_NET_FRR_IMAGE=quay.io/ocp-edge-qe/frr:8.5.3
+
+# Remote FRR
+export ECO_CNF_CORE_NET_REGISTRY_VM_HOST=registry.hlxcl7.lab.eng.tlv2.redhat.com
+export ECO_CNF_CORE_NET_REGISTRY_VM_USER=telcov10n
+export ECO_CNF_CORE_NET_REGISTRY_VM_BGP_IP=10.46.81.1
+export ECO_CNF_CORE_NET_REGISTRY_VM_PASSWORD=borsalino
+export ECO_CNF_CORE_NET_REGISTRY_VM_INTERFACE=eth0
+export ECO_CNF_CORE_NET_REGISTRY_VM_KEY_PATH — Path to the SSH private key file for authentication
+ssh telcov10n@registry.hlxcl7.lab.eng.tlv2.redhat.com
+borsalino

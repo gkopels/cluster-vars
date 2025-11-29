@@ -1,0 +1,54 @@
+# Cluster Configuration
+export KUBECONFIG=/tmp/kubeconfig-92
+export ECO_TEST_VERBOSE='true'
+export ECO_VERBOSE_LEVEL=100
+export ECO_CNF_CORE_NET_CNF_MCP_LABEL=workercnf
+export ECO_WORKER_LABEL=workercnf
+export ECO_CNF_CORE_NET_VLAN=92
+export ECO_CNF_CORE_NET_SWITCH_LAGS=ae50,ae60
+export ECO_CNF_CORE_NET_MLB_ADDR_LIST=10.6.133.20,10.6.133.21,10.6.133.22,2620:52:9:1685::f7,2620:52:9:1685::f8,2620:52:9:1685::f9
+
+# Switch VLANs 92 10 20
+export ECO_CNF_CORE_NET_SWITCH_USER="root"
+export ECO_CNF_CORE_NET_SWITCH_PASS='100yard-'
+export ECO_CNF_CORE_NET_SWITCH_IP="10.6.134.36"
+
+# Interface ConnectX-6
+export ECO_CNF_CORE_NET_SRIOV_INTERFACE_LIST=ens1f0np0,ens1f1np1
+export ECO_CNF_CORE_NET_SWITCH_INTERFACES=et-0/0/6,et-0/0/8,et-0/0/12,et-0/0/5
+
+# Interface X710
+export ECO_CNF_CORE_NET_SRIOV_INTERFACE_LIST=ens2f0,ens2f1
+export ECO_CNF_CORE_NET_SWITCH_INTERFACES=xe-0/0/31,xe-0/0/35,xe-0/0/33,xe-0/0/34
+ECO_OCP_SRIOV_INTERFACE_LIST
+# Interface MLX
+export ECO_CNF_CORE_NET_SRIOV_INTERFACE_LIST=ens3f0,ens3f1
+export ECO_CNF_CORE_NET_SWITCH_INTERFACES=et-0/0/8,et-0/0/6,et-0/0/12,et-0/0/5
+export ECO_OCP_SRIOV_INTERFACE_LIST=ens3f0,ens3f1
+# Images
+export ECO_CNF_CORE_NET_DPDK_TEST_CONTAINER=quay.io/ocp-edge-qe/eco-gotests-rootless-dpdk:v4.16.0
+export ECO_CNF_CORE_NET_TEST_CONTAINER=quay.io/ocp-edge-qe/eco-gotests-network-client:v4.20
+export ECO_CNF_CORE_NET_FRR_IMAGE=quay.io/ocp-edge-qe/frr:8.5.3
+export ECO_OCP_SRIOV_TEST_IMAGE=quay.io/ocp-edge-qe/eco-gotests-network-client:v4.20
+
+export ECO_CNF_CORE_NET_BMC_HOST_USER=root
+export ECO_CNF_CORE_NET_BMC_HOST_PASS=calvin
+export ECO_CNF_CORE_NET_BMC_HOST_NAMES=10.6.134.11
+
+scp telcov10n@10.6.133.14:/home/telcov10n/project/generated/kni-qe-92/auth/kubeconfig /tmp/kubeconfig-92
+borsalino
+
+https://10.6.134.65/restgui/index.html?22f94f2f03b3aceb694619570dcd9aaf#/
+
+
+####
+
+cnf-gotests
+
+export CNF_INTERFACES_LIST=ens1f0np0,ens1f1np1
+export SWITCH_INTERFACES=et-0/0/10,et-0/0/7,et-0/0/14,et-0/0/4
+
+export SWITCH_USER="root"
+export SWITCH_PASS='100yard-'
+export SWITCH_IP="10.6.134.36"
+
